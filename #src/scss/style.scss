@@ -1,0 +1,572 @@
+@import"nullstyle.scss";
+
+// @import url(color.scss) screen and (color);
+
+.wrapper {
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    height: 100%;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(100px, 120px) 1fr minmax(400px, 600px);
+}
+
+///////////////////////////////////////////////////////
+.header {
+    background: rgb(77, 77, 77);
+    display: grid;
+    grid-template-columns: 10% 20% 1fr 20% 10%;
+    grid-template-rows: 1fr;
+    border-bottom: solid 1px white;
+    align-items: center;
+    font-size: 20px;
+    margin-bottom: 10%;
+
+    &__logo {
+        background: url('../img/cat.png')5% no-repeat;
+        grid-column-start: 2;
+        // display: block;
+        min-height: 100px;
+        max-width: 100%;
+    }
+
+    &__info {
+        grid-column-start: 3;
+
+        ul {
+            display: grid;
+            grid-auto-flow: column;
+            color: white;
+        }
+    }
+
+    &__number {
+        grid-column-start: 4;
+        display: grid;
+        justify-items: flex-end;
+        text-align: center;
+
+        span {
+            display: grid;
+            color: white;
+            border: 1px solid orange;
+            padding: 10px 0px 5px 10px;
+            border-radius: 5em;
+            justify-items: center;
+        }
+
+        span::after {
+            content: '';
+            width: 30px;
+            height: 30px;
+            background: url("../img/tel.png") no-repeat;
+            display: inline-block;
+            margin: -23px 180px 0px 10px;
+        }
+    }
+}
+
+///////////////////////////////////////////////////////////////
+.main {
+    text-align: center;
+    background: url('../img/girl_1.png');
+    position: absolute;
+    top: 10;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    div {
+        padding-bottom: 5%;
+    }
+
+    .title {
+
+        li {
+            color: rgb(255, 255, 255);
+            list-style: none;
+        }
+
+        ul:nth-child(1) li:nth-child(2) {
+            font-size: 100px;
+            margin-bottom: 20px;
+            letter-spacing: 3px;
+        }
+
+        ul:nth-child(1) li:nth-child(1)::before {
+            content: '';
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background-color: orange;
+            display: inline-block;
+            margin: 0px 20px -10px 0px;
+        }
+
+        ul:nth-child(2) li:nth-child(1) {
+            margin-bottom: 50px;
+        }
+    }
+
+    ul:nth-child(2) li:nth-child(2) {
+        grid-column-start: 4;
+        display: grid;
+        justify-items: center;
+        text-align: center;
+
+        button {
+            background: orange;
+            padding: 10px 45px;
+            border-radius: 25px;
+            color: white;
+            font-size: 20px;
+            border: white solid 1px;
+        }
+    }
+
+    ////////////////////////////////////////////////////////
+    .padding {
+        // height: 20vh;
+    }
+
+    .items {
+        display: grid;
+        margin: auto;
+        max-width: 1000px;
+
+        .gallery {
+            display: grid;
+            grid-column-start: 2;
+            grid-auto-flow: column;
+            position: relative;
+
+            &__pilates {
+                background: rgb(77, 77, 77);
+            }
+
+            &__swimming {
+                background: rgb(255, 148, 25);
+            }
+
+            &__diet {
+                background: orange;
+            }
+
+            &__pilates,
+            &__swimming,
+            &__diet {
+                padding: 5%;
+
+                li {
+                    color: white;
+                    margin: 20px;
+                    line-height: 30px;
+                    font-size: 16px;
+                    text-align: left;
+
+                    img {
+                        width: 100px;
+                        height: 70px;
+                    }
+                }
+
+                ul li:first-child {
+                    text-align: start;
+                    padding-bottom: 20px;
+                }
+
+                ul li:nth-child(2) {
+                    font-size: 20px;
+                }
+
+                ul li:last-child {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    background-color: orange;
+                    margin: 0px 10px 0px 0px;
+                    display: grid;
+                    justify-items: flex-end;
+                    align-items: flex-end;
+                    border: 1px solid white;
+                    position: absolute;
+                    bottom: 30px;
+                    justify-items: center;
+                    align-items: center;
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+
+    /////////////////////////////////////////////////
+    .conteiner {
+        background: url('../img/girl_2.png');
+        transform: rotate(-10deg);
+        position: relative;
+        top: -15%;
+        left: -15%;
+        min-width: 50%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center right;
+        z-index: 2;
+        margin-bottom: -16%;
+
+        .info {
+            display: grid;
+            grid-template-columns: 25% 50%;
+            transform: rotate(10deg);
+            position: relative;
+            right: -14.5%;
+
+            li {
+                list-style: none;
+                grid-column-start: 2;
+                text-align: left;
+                width: 70%;
+                margin-bottom: 30px;
+            }
+
+            li:nth-child(1) {
+                font-size: 12px;
+                color: orange;
+                margin-bottom: 10px;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+
+            li:nth-child(2) {
+                font-size: 55px;
+                letter-spacing: 3px;
+
+                span {
+                    font-weight: bold;
+                }
+            }
+
+            li:nth-child(3) {
+                font-weight: bold;
+                line-height: 30px;
+            }
+
+            li:nth-child(4) {
+                line-height: 30px;
+            }
+
+            li:nth-child(5) {
+                margin-bottom: 0;
+
+                button {
+                    background: orange;
+                    padding: 10px 45px;
+                    border-radius: 25px;
+                    color: white;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    //////////////////////////////////////////////////////////
+    //    padding между верхней и нижней картинкой
+    .img_bg {
+        background: url('../img/girl_33.jpg');
+        // position: relative;
+        // left: 0;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        z-index: 1;
+
+        button {
+            background: orange;
+            padding: 10px 45px;
+            border-radius: 25px;
+            color: white;
+            font-size: 20px;
+            position: relative;
+            left: 50%;
+        }
+    }
+
+    .testimonials {
+        color: white;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .items {
+
+        &__teams {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+
+            ul {
+                padding: 5%;
+            }
+
+            li {
+                text-align: left;
+                color: white;
+                margin-bottom: 10px;
+                font-style: italic;
+                line-height: 25px;
+            }
+
+            li:nth-child(2) {
+                color: orange;
+                font-size: 16px;
+                text-align: left;
+                margin-bottom: 20px;
+            }
+
+
+            ul:nth-child(2) li:nth-child(2) {
+                display: grid;
+                justify-content: flex-start;
+            }
+
+            ul:nth-child(1) li:nth-child(2) {
+                color: white;
+                font-size: 55px;
+                letter-spacing: 3px;
+            }
+
+            ul:nth-child(1) li:nth-child(1) {
+                color: orange;
+                font-style: 12px;
+            }
+
+            ul:nth-child(2) li:nth-child(1)::before {
+                content: '';
+                width: 50px;
+                height: 50px;
+                background: url('../img/test_1.jpg');
+                display: block;
+                border-radius: 50%;
+                margin: 0px 0px -40px -90px;
+            }
+
+            ul:nth-child(3) li:nth-child(1)::before {
+                content: '';
+                width: 50px;
+                height: 50px;
+                background: url('../img/test_2.jpg');
+                display: block;
+                border-radius: 50%;
+                margin: 0px 0px -40px -90px;
+            }
+
+            ul:nth-child(4) li:nth-child(1)::before {
+                content: '';
+                width: 50px;
+                height: 50px;
+                background: url('../img/test_3.jpg');
+                display: block;
+                border-radius: 50%;
+                margin: 0px 0px -40px -90px;
+            }
+
+            li:nth-child(4) {
+                font-size: 30px;
+
+                span {
+                    color: orange;
+                }
+            }
+        }
+    }
+
+    /////////////////////////////////////////////////
+    .scroll {
+        margin-top: -3%;
+    }
+
+    [class^="scroll"] {
+        position: relative;
+        height: 10em;
+        line-height: 10em;
+        padding: 0 3em;
+        height: 50vh;
+    }
+
+    [class^="scroll"] input {
+        display: none;
+    }
+
+    [class^="scroll"] div {
+        height: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        word-wrap: normal;
+        font-size: 0;
+    }
+
+    [class^="scroll"] img {
+        position: relative;
+        right: 0em;
+        width: 20%;
+        height: 100%;
+        transition: .5s;
+    }
+
+    [class^="scroll"] label {
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 3em;
+    }
+
+    [class^="scroll"] input:nth-of-type(1):checked~label:nth-of-type(2):after,
+    [class^="scroll"] input:nth-of-type(2):checked~label:nth-of-type(3):after,
+    [class^="scroll"] input:nth-of-type(3):checked~label:nth-of-type(4):after,
+    [class^="scroll"] input:nth-of-type(4):checked~label:nth-of-type(5):after,
+    [class^="scroll"] input:nth-of-type(5):checked~label:nth-of-type(6):after,
+    [class^="scroll"] input:nth-of-type(6):checked~label:nth-of-type(7):after {
+        content: "\3009";
+        position: absolute;
+        right: 0;
+    }
+
+    [class^="scroll"] input:nth-of-type(2):checked~label:nth-of-type(1):after,
+    [class^="scroll"] input:nth-of-type(3):checked~label:nth-of-type(2):after,
+    [class^="scroll"] input:nth-of-type(4):checked~label:nth-of-type(3):after,
+    [class^="scroll"] input:nth-of-type(5):checked~label:nth-of-type(4):after,
+    [class^="scroll"] input:nth-of-type(6):checked~label:nth-of-type(5):after,
+    [class^="scroll"] input:nth-of-type(7):checked~label:nth-of-type(6):after {
+        content: "\3008";
+        position: absolute;
+        left: 0;
+    }
+
+    [class^="scroll"] input:nth-of-type(2):checked~div img {
+        right: 25%;
+    }
+
+    [class^="scroll"] input:nth-of-type(3):checked~div img {
+        right: 50%;
+    }
+
+    [class^="scroll"] input:nth-of-type(4):checked~div img {
+        right: 75%;
+    }
+
+    [class^="scroll"] input:nth-of-type(5):checked~div img {
+        right: 100%;
+    }
+
+    [class^="scroll"] input:nth-of-type(6):checked~div img {
+        right: 125%;
+    }
+
+    [class^="scroll"] input:nth-of-type(7):checked~div img {
+        right: 150%;
+    }
+
+    ///////////////////////////////////
+    .courses {
+        max-width: 1200px;
+        margin: auto;
+
+        &__title {
+            text-align: left;
+
+            li:nth-child(1) {
+                font-size: 16px;
+                color: orange;
+            }
+
+            ul>li:nth-child(2) {
+                font-size: 55px;
+                letter-spacing: 3px;
+            }
+
+            ul {
+                margin-left: 3%;
+            }
+        }
+
+        .teams {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+
+            ul {
+                padding: 10%;
+            }
+
+            ul:nth-child(2) li {
+                text-align: left;
+            }
+
+            ul:nth-child(2) li:nth-child(1) {
+                text-align: center;
+            }
+
+            li:nth-child(1) {
+                font-size: 25px;
+                margin-bottom: 20px;
+                margin-right: -40px;
+            }
+
+            li:nth-child(1)::before,
+            li:nth-child(2)::before,
+            li:nth-child(3)::before,
+            li:nth-child(4)::before,
+            li:nth-child(5) ::before,
+            li:nth-child(6) ::before {
+                width: 70px;
+                height: 70px;
+                display: block;
+                margin: 0px 0px -35px 0px;
+            }
+
+            ul:nth-child(1) li:nth-child(1)::before {
+                content: '';
+                background: url('../img/icon_4.png')no-repeat;
+            }
+
+            ul:nth-child(2) li:nth-child(1)::before {
+                content: '';
+                background: url('../img/icon_5.png')no-repeat;
+            }
+
+            ul:nth-child(3) li:nth-child(1)::before {
+                content: '';
+                background: url('../img/icon_6.png')no-repeat;
+            }
+
+            ul:nth-child(4) li:nth-child(1)::before {
+                content: '';
+                background: url('../img/icon_7.png')no-repeat;
+            }
+
+            ul:nth-child(5) li:nth-child(1)::before {
+                content: '';
+                background: url('../img/icon_8.png')no-repeat;
+            }
+
+            ul:nth-child(6) li:nth-child(1)::before {
+                content: '';
+                background: url('../img/icon_9.png')no-repeat;
+            }
+
+            li:nth-child(2) {
+                text-align: left;
+                font-size: 16px;
+                line-height: 25px;
+            }
+        }
+    }
+
+
+
+}
